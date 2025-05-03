@@ -5,6 +5,7 @@ import { HomeIcon, UserIcon, ZapIcon, CompassIcon } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
+
 const Navbar = () => {
   const { isSignedIn } = useUser();
 
@@ -17,7 +18,7 @@ const Navbar = () => {
             <ZapIcon className="w-4 h-4 text-[var(--primary)]" />
           </div>
           <span className="text-xl font-bold font-mono text-[var(--sidebar-foreground)]">
-            travel<span className="text-[var(--accent)]">pal</span>.ai
+            travel<span className="text-[var(--accent)]">pal</span>
           </span>
         </Link>
 
@@ -34,8 +35,8 @@ const Navbar = () => {
               </Link>
 
               <Link
-                href="/generate-trip"
-                className="flex items-center gap-1.5 text-sm text-[var(--sidebar-foreground)] hover:text-[var(--primary)] transition-colors"
+                href="/plan"
+                className="flex items-center gap-1.5 text-sm …"
               >
                 <CompassIcon size={16} />
                 <span>Plan</span>

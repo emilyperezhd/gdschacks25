@@ -16,11 +16,11 @@ const Footer = () => {
                 <ZapIcon className="w-4 h-4 text-[var(--primary)]" />
               </div>
               <span className="text-xl font-bold font-mono text-[var(--sidebar-foreground)]">
-                travel<span className="text-[var(--accent)]">pal</span>.ai
+                travel<span className="text-[var(--accent)]">pal</span>
               </span>
             </Link>
             <p className="text-sm text-[var(--muted-foreground)]">
-              © {new Date().getFullYear()} travelpal.ai — All rights reserved
+              © {new Date().getFullYear()} travelpal — All rights reserved
             </p>
           </div>
 
