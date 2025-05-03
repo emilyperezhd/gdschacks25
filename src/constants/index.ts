@@ -2,7 +2,7 @@ export const TRAVEL_DESTINATIONS = [
   {
     id: 1,
     destination: "Copenhagen",
-    profilePic: "/images/copenhagen.jpg",
+    profilePic: "/GettyImages-1587697699.jpg.webp",
     eco_rating: "★★★★★",
     age_group: "All Ages",
     travel_days: 5,
@@ -19,7 +19,7 @@ export const TRAVEL_DESTINATIONS = [
   {
     id: 2,
     destination: "Costa Rica",
-    profilePic: "/images/costa-rica.jpg",
+    profilePic: "/Costa-Rica-waterfall-family-main.jpg.avif",
     eco_rating: "★★★★☆",
     age_group: "Adventurers 18–40",
     travel_days: 7,
@@ -36,7 +36,7 @@ export const TRAVEL_DESTINATIONS = [
   {
     id: 3,
     destination: "Kyoto",
-    profilePic: "/images/kyoto.jpg",
+    profilePic: "/kyoto.webp",
     eco_rating: "★★★★☆",
     age_group: "Cultural Explorers 25+",
     travel_days: 6,
