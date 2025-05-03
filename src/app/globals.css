@@ -117,7 +117,7 @@
   --accent: var(--eco-green-glow);
   --accent-foreground: #1F2F25;
   --muted: #D8EEDD;
-  --muted-foreground: #4A6350;
+  --muted-foreground: #1F2F25; /* Same as foreground (rich dark green), guarantees readability */
   --destructive: #ef4444;
   --border: rgba(61, 122, 80, 0.3);
   --input: rgba(61, 122, 80, 0.2);
