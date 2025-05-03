@@ -42,118 +42,101 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 }
-
 :root {
   --radius: 0.625rem;
 
-  /* Eco Green Theme Colors */
+  /* Jungle Eco Theme */
   --eco-black: #000000;
-  --eco-dark: #0a0c14;
-  --eco-green-bright: #22c55e;
-  --eco-green: #15803d;
-  --eco-green-dark: #065f46;
-  --eco-green-glow: #4ade80;
+  --eco-dark: #E8F6E8; /* pastel soft green background */
+  --eco-green-bright: #529264; /* medium jungle green */
+  --eco-green: #37c263;        /* deeper jungle green (primary) */
+  --eco-green-dark: #285339;   /* even deeper for hovers */
+  --eco-green-glow: #B5DFC0;   /* pastel but earthy glow green */
 
   /* Background */
   --background: var(--eco-dark);
-  --foreground: #f2f2f2;
+  --foreground: #1F2F25; /* rich dark green text */
 
   /* Card and popover elements */
-  --card: #111827;
-  --card-foreground: #f2f2f2;
-  --popover: #111827;
-  --popover-foreground: #f2f2f2;
+  --card: #F3FBF3;
+  --card-foreground: #1F2F25;
+  --popover: #F3FBF3;
+  --popover-foreground: #1F2F25;
 
-  /* Primary - Main green */
-  --primary: var(--eco-green-bright);
-  --primary-foreground: var(--eco-dark);
+  /* Primary - Jungle green */
+  --primary: var(--eco-green);
+  --primary-foreground: #ffffff;
 
-  /* Secondary - Darker green */
-  --secondary: var(--eco-green);
+  /* Secondary - lighter jungle green */
+  --secondary: var(--eco-green-bright);
   --secondary-foreground: #ffffff;
 
-  /* Accent - Light green with glow */
+  /* Accent - Glow earthy green */
   --accent: var(--eco-green-glow);
-  --accent-foreground: var(--eco-dark);
+  --accent-foreground: #1F2F25;
 
   /* Muted elements */
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
+  --muted: #D8EEDD;
+  --muted-foreground: #4A6350;
 
   /* System colors */
   --destructive: #ef4444;
-  --border: rgba(34, 197, 94, 0.2);
-  --input: rgba(34, 197, 94, 0.2);
+  --border: rgba(61, 122, 80, 0.3);
+  --input: rgba(61, 122, 80, 0.2);
   --ring: var(--eco-green);
 
-  /* Chart colors - eco theme */
-  --chart-1: var(--eco-green-bright);
-  --chart-2: #16a34a;
-  --chart-3: var(--eco-green);
-  --chart-4: #22c55e;
-  --chart-5: #15803d;
+  /* Chart colors - jungle tones */
+  --chart-1: var(--eco-green);
+  --chart-2: var(--eco-green-bright);
+  --chart-3: var(--eco-green-dark);
+  --chart-4: #529264;
+  --chart-5: #285339;
 
   /* Sidebar colors */
-  --sidebar: var(--eco-dark);
-  --sidebar-foreground: #f2f2f2;
-  --sidebar-primary: var(--eco-green-bright);
-  --sidebar-primary-foreground: var(--eco-dark);
-  --sidebar-accent: var(--eco-green);
+  --sidebar: #E8F6E8;
+  --sidebar-foreground: #1F2F25;
+  --sidebar-primary: var(--eco-green);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--eco-green-bright);
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: rgba(34, 197, 94, 0.2);
+  --sidebar-border: rgba(61, 122, 80, 0.2);
   --sidebar-ring: var(--eco-green);
 }
 
 .dark {
-  /* Background */
   --background: var(--eco-dark);
-  --foreground: #f2f2f2;
-
-  /* Card and popover elements */
-  --card: #111827;
-  --card-foreground: #f2f2f2;
-  --popover: #111827;
-  --popover-foreground: #f2f2f2;
-
-  /* Primary - Main green */
-  --primary: var(--eco-green-bright);
-  --primary-foreground: var(--eco-dark);
-
-  /* Secondary - Darker green */
-  --secondary: var(--eco-green);
+  --foreground: #1F2F25;
+  --card: #F3FBF3;
+  --card-foreground: #1F2F25;
+  --popover: #F3FBF3;
+  --popover-foreground: #1F2F25;
+  --primary: var(--eco-green);
+  --primary-foreground: #ffffff;
+  --secondary: var(--eco-green-bright);
   --secondary-foreground: #ffffff;
-
-  /* Accent - Light green with glow */
   --accent: var(--eco-green-glow);
-  --accent-foreground: var(--eco-dark);
-
-  /* Muted elements */
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
-
-  /* System colors */
+  --accent-foreground: #1F2F25;
+  --muted: #D8EEDD;
+  --muted-foreground: #4A6350;
   --destructive: #ef4444;
-  --border: rgba(34, 197, 94, 0.2);
-  --input: rgba(34, 197, 94, 0.2);
+  --border: rgba(61, 122, 80, 0.3);
+  --input: rgba(61, 122, 80, 0.2);
   --ring: var(--eco-green);
-
-  /* Chart colors - eco theme */
-  --chart-1: var(--eco-green-bright);
-  --chart-2: #16a34a;
-  --chart-3: var(--eco-green);
-  --chart-4: #22c55e;
-  --chart-5: #15803d;
-
-  /* Sidebar colors */
-  --sidebar: var(--eco-dark);
-  --sidebar-foreground: #f2f2f2;
-  --sidebar-primary: var(--eco-green-bright);
-  --sidebar-primary-foreground: var(--eco-dark);
-  --sidebar-accent: var(--eco-green);
+  --chart-1: var(--eco-green);
+  --chart-2: var(--eco-green-bright);
+  --chart-3: var(--eco-green-dark);
+  --chart-4: #529264;
+  --chart-5: #285339;
+  --sidebar: #E8F6E8;
+  --sidebar-foreground: #1F2F25;
+  --sidebar-primary: var(--eco-green);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--eco-green-bright);
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: rgba(34, 197, 94, 0.2);
+  --sidebar-border: rgba(61, 122, 80, 0.2);
   --sidebar-ring: var(--eco-green);
 }
+
 
 @layer base {
   * {
