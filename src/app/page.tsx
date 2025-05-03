@@ -14,8 +14,8 @@ const HomePage = () => {
             <div className="absolute -top-10 left-0 w-40 h-40 border-l-2 border-t-2" />
 
             {/* LEFT SIDE CONTENT */}
-            <div className="lg:col-span-7 space-y-8 relative">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+            <div className="lg:col-span-7 space-y-8 relative lg:pl-16">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
                 <div>
                   <span className="text-foreground">Transform</span>
                 </div>
