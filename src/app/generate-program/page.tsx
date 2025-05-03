@@ -152,10 +152,10 @@ const GenerateProgramPage = () => {
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold font-mono">
             <span>Generate Your </span>
-            <span className="text-primary uppercase">Fitness Program</span>
+            <span className="text-primary uppercase">TravelPal Conference With EcoBear</span>
           </h1>
           <p className="text-muted-foreground mt-2">
-            Have a voice conversation with our AI assistant to create your personalized plan
+            Have a voice conversation with our AI EcoBear to create your personalized plan
           </p>
         </div>
 
@@ -205,8 +205,8 @@ const GenerateProgramPage = () => {
                 </div>
               </div>
 
-              <h2 className="text-xl font-bold text-foreground">CodeFlex AI</h2>
-              <p className="text-sm text-muted-foreground mt-1">Fitness & Diet Coach</p>
+              <h2 className="text-xl font-bold text-foreground">EcoBear</h2>
+              <p className="text-sm text-muted-foreground mt-1">Travel Plan Assistant</p>
 
               {/* SPEAKING INDICATOR */}
 
@@ -281,7 +281,7 @@ const GenerateProgramPage = () => {
                 <div className="message-item animate-fadeIn">
                   <div className="font-semibold text-xs text-primary mb-1">System:</div>
                   <p className="text-foreground">
-                    Your fitness program has been created! Redirecting to your profile...
+                    Your travel itinerary has been created! Redirecting to your profile...
                   </p>
                 </div>
               )}
