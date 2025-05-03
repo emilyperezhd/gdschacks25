@@ -1,98 +1,52 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
-  --color-card: var(--card);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-}
+/* Theme variables */
 :root {
   --radius: 0.625rem;
 
-  /* Jungle Eco Theme */
+  /* Eco jungle theme colors */
   --eco-black: #000000;
   --eco-dark: #E8F6E8; /* pastel soft green background */
-  --eco-green-bright: #529264; /* medium jungle green */
-  --eco-green: #37c263;        /* deeper jungle green (primary) */
-  --eco-green-dark: #285339;   /* even deeper for hovers */
-  --eco-green-glow: #B5DFC0;   /* pastel but earthy glow green */
+  --eco-green-bright: #529264; /* jungle medium green */
+  --eco-green: #37c263; /* deep jungle green */
+  --eco-green-dark: #285339; /* darker jungle green */
+  --eco-green-glow: #B5DFC0; /* pastel glow green */
 
-  /* Background */
+  /* Base UI colors */
   --background: var(--eco-dark);
-  --foreground: #1F2F25; /* rich dark green text */
+  --foreground: #1F2F25;
 
-  /* Card and popover elements */
   --card: #F3FBF3;
   --card-foreground: #1F2F25;
+
   --popover: #F3FBF3;
   --popover-foreground: #1F2F25;
 
-  /* Primary - Jungle green */
   --primary: var(--eco-green);
   --primary-foreground: #ffffff;
 
-  /* Secondary - lighter jungle green */
   --secondary: var(--eco-green-bright);
   --secondary-foreground: #ffffff;
 
-  /* Accent - Glow earthy green */
   --accent: var(--eco-green-glow);
   --accent-foreground: #1F2F25;
 
-  /* Muted elements */
   --muted: #D8EEDD;
   --muted-foreground: #4A6350;
 
-  /* System colors */
   --destructive: #ef4444;
+
   --border: rgba(61, 122, 80, 0.3);
   --input: rgba(61, 122, 80, 0.2);
   --ring: var(--eco-green);
 
-  /* Chart colors - jungle tones */
-  --chart-1: var(--eco-green);
-  --chart-2: var(--eco-green-bright);
-  --chart-3: var(--eco-green-dark);
-  --chart-4: #529264;
-  --chart-5: #285339;
+  /* Terminal specific (for readability on dark bg) */
+  --terminal-background: rgba(10, 20, 10, 0.9); /* very dark green tint */
+  --terminal-text: rgba(220, 255, 220, 0.9); /* light minty green text */
+  --terminal-muted: rgba(140, 180, 140, 0.6);
 
-  /* Sidebar colors */
+  /* Sidebar */
   --sidebar: #E8F6E8;
   --sidebar-foreground: #1F2F25;
   --sidebar-primary: var(--eco-green);
@@ -103,40 +57,33 @@
   --sidebar-ring: var(--eco-green);
 }
 
+/* Dark mode overrides */
 .dark {
-  --background: var(--eco-dark);
-  --foreground: #1F2F25;
-  --card: #F3FBF3;
-  --card-foreground: #1F2F25;
-  --popover: #F3FBF3;
-  --popover-foreground: #1F2F25;
+  --background: #101A12;
+  --foreground: #D8EEDD;
+
+  --card: #1A2B1A;
+  --card-foreground: #D8EEDD;
+
+  --popover: #1A2B1A;
+  --popover-foreground: #D8EEDD;
+
   --primary: var(--eco-green);
   --primary-foreground: #ffffff;
+
   --secondary: var(--eco-green-bright);
   --secondary-foreground: #ffffff;
-  --accent: var(--eco-green-glow);
-  --accent-foreground: #1F2F25;
-  --muted: #D8EEDD;
-  --muted-foreground: #1F2F25; /* Same as foreground (rich dark green), guarantees readability */
-  --destructive: #ef4444;
-  --border: rgba(61, 122, 80, 0.3);
-  --input: rgba(61, 122, 80, 0.2);
-  --ring: var(--eco-green);
-  --chart-1: var(--eco-green);
-  --chart-2: var(--eco-green-bright);
-  --chart-3: var(--eco-green-dark);
-  --chart-4: #529264;
-  --chart-5: #285339;
-  --sidebar: #E8F6E8;
-  --sidebar-foreground: #1F2F25;
-  --sidebar-primary: var(--eco-green);
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: var(--eco-green-bright);
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: rgba(61, 122, 80, 0.2);
-  --sidebar-ring: var(--eco-green);
-}
 
+  --accent: var(--eco-green-glow);
+  --accent-foreground: #D8EEDD;
+
+  --muted: #4A6350;
+  --muted-foreground: #A8C4A8;
+
+  --terminal-background: rgba(5, 10, 5, 0.95);
+  --terminal-text: rgba(230, 255, 230, 1);
+  --terminal-muted: rgba(140, 180, 140, 0.7);
+}
 
 @layer base {
   * {
@@ -145,12 +92,14 @@
   body {
     @apply bg-background text-foreground;
   }
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
 }
 
+/* Animations */
 @keyframes scanline {
   0% {
     background-position: 0 0;
