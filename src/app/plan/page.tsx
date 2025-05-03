@@ -38,7 +38,7 @@ export default function PlanPage() {
             </CardHeader>
             <CardContent>
               <p>
-                {formatDate(plan.workoutPlan.schedule[0])} {/* Using the first date in the schedule */}
+                {formatDate(plan.itineraryPlan.schedule[0])} {/* Using the first date in the schedule */}
               </p>
               {/* Uncomment and update the following block if 'notes' is added to the plan type */}
               {/* {plan.notes && (

@@ -12,30 +12,14 @@ export default defineSchema({
   plans: defineTable({
     userId: v.string(),
     name: v.string(),
-    workoutPlan: v.object({
+    itineraryPlan: v.object({
+      // e.g. ["Day 1", "Day 2", ...]
       schedule: v.array(v.string()),
-      exercises: v.array(
+      // one entry per day, listing eco‑friendly activities
+      activities: v.array(
         v.object({
           day: v.string(),
-          routines: v.array(
-            v.object({
-              name: v.string(),
-              sets: v.optional(v.number()),
-              reps: v.optional(v.number()),
-              duration: v.optional(v.string()),
-              description: v.optional(v.string()),
-              exercises: v.optional(v.array(v.string())),
-            })
-          ),
-        })
-      ),
-    }),
-    dietPlan: v.object({
-      dailyCalories: v.number(),
-      meals: v.array(
-        v.object({
-          name: v.string(),
-          foods: v.array(v.string()),
+          activities: v.array(v.string()),
         })
       ),
     }),
