@@ -18,17 +18,17 @@ const HomePage = () => {
             <div className="lg:col-span-7 space-y-8 relative lg:pl-16">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
                 <div>
-                  <span className="text-foreground">Transform</span>
+                  <span className="text-foreground">Adventure Awaits!</span>
                 </div>
                 <div>
-                  <span className="text-primary">Your Body</span>
+                  <span className="text-primary">Make</span>
                 </div>
                 <div className="pt-2">
-                  <span className="text-foreground">With Advanced</span>
+                  <span className="text-foreground">Every Trip </span>
                 </div>
                 <div className="pt-2">
-                  <span className="text-foreground">AI</span>
-                  <span className="text-primary"> Technology</span>
+                  <span className="text-foreground"></span>
+                  <span className="text-primary">Eco-Friendly</span>
                 </div>
               </h1>
 
@@ -36,15 +36,14 @@ const HomePage = () => {
               <div className="h-px w-full bg-gradient-to-r from-primary via-secondary to-primary opacity-50"></div>
 
               <p className="text-xl text-muted-foreground w-2/3">
-                Talk to our AI assistant and get personalized diet plans and workout routines
-                designed just for you
+              Plan your perfect eco-friendly trip with ease using our Gemini-powered AI and interactive chatbot — making sustainable travel smarter and more personal than ever.
               </p>
 
               {/* STATS */}
               <div className="flex items-center gap-10 py-6 font-mono">
                 <div className="flex flex-col">
-                  <div className="text-2xl text-primary">500+</div>
-                  <div className="text-xs uppercase tracking-wider">ACTIVE USERS</div>
+                  <div className="text-2xl text-primary">10+</div>
+                  <div className="text-xs uppercase tracking-wider">ECO TRIPS PLANNED</div>
                 </div>
                 <div className="h-12 w-px bg-gradient-to-b from-transparent via-border to-transparent"></div>
                 <div className="flex flex-col">
