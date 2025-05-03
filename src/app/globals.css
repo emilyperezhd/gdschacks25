@@ -72,7 +72,7 @@
   --secondary-foreground: #ffffff;
 
   /* Accent - Glow earthy green */
-  --accent: var(--eco-green-glow);
+  --accent: var(--eco-green);
   --accent-foreground: #1F2F25;
 
   /* Muted elements */

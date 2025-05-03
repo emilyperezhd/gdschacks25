@@ -1,10 +1,9 @@
 "use client";
 
 import { SignInButton, SignUpButton, UserButton, useUser } from "@clerk/nextjs";
-import { HomeIcon, UserIcon, ZapIcon, CompassIcon } from "lucide-react";
+import { HomeIcon, UserIcon, CompassIcon } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
-
 
 const Navbar = () => {
   const { isSignedIn } = useUser();
@@ -12,13 +11,17 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--sidebar)]/80 backdrop-blur-md border-b border-[var(--border)] py-3">
       <div className="container mx-auto flex items-center justify-between">
-        {/* LOGO */}
+        {/* LOGO with leaf image */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="p-1 bg-[var(--accent)] rounded">
-            <ZapIcon className="w-4 h-4 text-[var(--primary)]" />
-          </div>
+          
+            <img
+              src="/leaf.png"
+              alt="TravelPal Logo"
+              className="w-8 h-8 object-contain"
+            />
+          
           <span className="text-xl font-bold font-mono text-[var(--sidebar-foreground)]">
-            travel<span className="text-[var(--accent)]">pal</span>
+            Travel<span className="text-[var(--accent)]">Pal</span>
           </span>
         </Link>
 
@@ -36,7 +39,7 @@ const Navbar = () => {
 
               <Link
                 href="/plan"
-                className="flex items-center gap-1.5 text-sm …"
+                className="flex items-center gap-1.5 text-sm text-[var(--sidebar-foreground)] hover:text-[var(--primary)] transition-colors"
               >
                 <CompassIcon size={16} />
                 <span>Plan</span>
