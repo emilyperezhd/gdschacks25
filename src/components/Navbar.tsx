@@ -58,7 +58,7 @@ const Navbar = () => {
                 variant="outline"
                 className="ml-2 border-[var(--accent)] text-[var(--sidebar-foreground)] hover:text-white hover:bg-[var(--primary)]"
               >
-                <Link href="/generate-trip">Get Started</Link>
+                <Link href="/generate-program">Get Started</Link>
               </Button>
 
               <UserButton />
