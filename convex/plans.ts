@@ -1,3 +1,4 @@
+// plans.ts
 import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
 
@@ -11,6 +12,15 @@ export const createPlan = mutation({
         v.object({
           day: v.string(),
           activities: v.array(v.string()),
+          // add legs here to match your schema
+          legs: v.array(
+            v.object({
+              from: v.string(),
+              to: v.string(),
+              distance_km: v.number(),
+              co2_kg: v.number(),
+            })
+          ),
         })
       ),
     }),

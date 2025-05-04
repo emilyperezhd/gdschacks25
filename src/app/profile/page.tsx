@@ -16,7 +16,7 @@ import {
   TabsTrigger,
   TabsContent,
 } from "@/components/ui/tabs";
-import { CalendarIcon, MapIcon, Utensils } from "lucide-react";
+import { CalendarIcon, MapIcon, } from "lucide-react";
 import {
   Accordion,
   AccordionItem,

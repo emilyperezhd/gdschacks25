@@ -1,16 +1,17 @@
 // app/destinations/[id]/page.tsx
-import Image from "next/image"
-import Link from "next/link"
-import { TRAVEL_DESTINATIONS } from "@/constants"
-import { Button } from "@/components/ui/button"
 
-interface Props {
-  params: { id: string }
-}
+import Image from "next/image";
+import Link from "next/link";
+import { TRAVEL_DESTINATIONS } from "@/constants";
+import { Button } from "@/components/ui/button";
 
-export default function DestinationDetail({ params }: Props) {
-  const id = parseInt(params.id, 10)
-  const place = TRAVEL_DESTINATIONS.find((p) => p.id === id)
+export default function DestinationDetail({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const id = parseInt(params.id, 10);
+  const place = TRAVEL_DESTINATIONS.find((p) => p.id === id);
 
   if (!place) {
     return (
@@ -20,7 +21,7 @@ export default function DestinationDetail({ params }: Props) {
           ← Back Home
         </Link>
       </div>
-    )
+    );
   }
 
   return (
@@ -88,5 +89,5 @@ export default function DestinationDetail({ params }: Props) {
         <Button>Book this trip</Button>
       </div>
     </div>
-  )
+  );
 }

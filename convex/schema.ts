@@ -15,12 +15,20 @@ export default defineSchema({
     itineraryPlan: v.object({
       // e.g. ["Day 1", "Day 2", ...]
       schedule: v.array(v.string()),
-      // one entry per day, listing eco‑friendly activities
+      // one entry per day, listing eco‑friendly activities and travel legs
       activities: v.array(
         v.object({
           day: v.string(),
           activities: v.array(v.string()),
-        })
+          legs: v.array(
+            v.object({
+              from: v.string(),       // starting point
+              to: v.string(),         // destination point
+              distance_km: v.number(),// distance in kilometers
+              co2_kg: v.number(),     // estimated CO₂ emissions in kg
+            })
+          ),
+        })  
       ),
     }),
     isActive: v.boolean(),
