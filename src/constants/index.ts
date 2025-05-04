@@ -1,131 +1,82 @@
+// constants.ts
 export const TRAVEL_DESTINATIONS = [
   {
     id: 1,
-    destination: "Copenhagen",
-    profilePic: "/GettyImages-1587697699.jpg.webp",
-    eco_rating: "★★★★★",
-    age_group: "All Ages",
-    travel_days: 5,
-    travel_plan: {
-      title: "Bike & Culture Tour",
-      description:
-        "Explore Copenhagen by bike lanes, enjoy local art galleries, and stay in certified green hotels. The entire trip is carbon-neutral.",
-    },
-    food_plan: {
-      title: "Nordic Green Cuisine",
-    },
-    transportation: "Cycling & Metro",
+    slug: "copenhagen",
+    destination: "Copenhagen, Denmark",
+    heroImage: "/GettyImages-1587697699.jpg.webp",
+    overview: `
+      Copenhagen is Denmark’s capital and most populous city.  
+      Famous for its canals, colorful waterfront houses at Nyhavn,  
+      and the Tivoli Gardens (one of the oldest amusement parks in the world).
+    `.trim(),
+    bestTimeToVisit: "May–September",
+    topAttractions: [
+      "Nyhavn Canal",
+      "Tivoli Gardens",
+      "The Little Mermaid Statue",
+      "Christiansborg Palace",
+    ],
+    tips: [
+      "Pick up a Copenhagen Card for free public transport and attraction entry.",
+      "Rent a bike — the city is built for cycling.",
+      "Don’t miss the street food at Reffen market.",
+    ],
+    transportation: "Bikes, Metro, Ferries",
+    foodPlan: { title: "Nordic Green Cuisine" },
+    ecoRating: "★★★★★",
   },
   {
     id: 2,
+    slug: "costa-rica",
     destination: "Costa Rica",
-    profilePic: "/Costa-Rica-waterfall-family-main.jpg.avif",
-    eco_rating: "★★★★☆",
-    age_group: "Adventurers 18–40",
-    travel_days: 7,
-    travel_plan: {
-      title: "Rainforest Eco Retreat",
-      description:
-        "Stay in off-grid eco-lodges, zip-line through jungles, and support reforestation programs while discovering native wildlife.",
-    },
-    food_plan: {
-      title: "Organic Farm-to-Table",
-    },
-    transportation: "Electric shuttles & walking",
+    heroImage: "/Costa-Rica-waterfall-family-main.jpg.avif",
+    overview: `
+      Costa Rica is a biodiversity hotspot in Central America.  
+      Zip-line above cloud forests, stay within off-grid eco-lodges,  
+      and help support reforestation projects along the way.
+    `.trim(),
+    bestTimeToVisit: "December–April",
+    topAttractions: [
+      "Arenal Volcano",
+      "Monteverde Cloud Forest",
+      "Manuel Antonio National Park",
+      "La Fortuna Waterfall",
+    ],
+    tips: [
+      "Pack light rain gear — afternoon showers are common year-round.",
+      "Support local guides for wildlife tours.",
+      "Use refillable water bottles; many hotels have filtered stations.",
+    ],
+    transportation: "Electric shuttles, Walking",
+    foodPlan: { title: "Organic Farm-to-Table" },
+    ecoRating: "★★★★☆",
   },
   {
     id: 3,
-    destination: "Kyoto",
-    profilePic: "/kyoto.webp",
-    eco_rating: "★★★★☆",
-    age_group: "Cultural Explorers 25+",
-    travel_days: 6,
-    travel_plan: {
-      title: "Zen & Sustainability",
-      description:
-        "Experience ancient temples, stay at green ryokans, and use Japan's low-emission rail network to explore Kyoto and Arashiyama.",
-    },
-    food_plan: {
-      title: "Seasonal Plant-Based Cuisine",
-    },
-    transportation: "Trains & Buses",
+    slug: "kyoto",
+    destination: "Kyoto, Japan",
+    heroImage: "/kyoto.webp",
+    overview: `
+      Kyoto was Japan’s capital for over a thousand years,  
+      home to 17 UNESCO World Heritage sites.  
+      Wander ancient temples, stroll bamboo groves,  
+      and stay in traditional green ryokans.
+    `.trim(),
+    bestTimeToVisit: "March–May & October–November",
+    topAttractions: [
+      "Fushimi Inari Shrine",
+      "Arashiyama Bamboo Grove",
+      "Kinkaku-ji Temple (Golden Pavilion)",
+      "Gion Geisha District",
+    ],
+    tips: [
+      "Buy a JR Rail Pass to save on inter-city travel.",
+      "Book ryokan stays months in advance, especially in spring.",
+      "Respect temple etiquette: remove shoes, stay quiet in halls.",
+    ],
+    transportation: "Trains, Buses",
+    foodPlan: { title: "Plant-Based Cuisine" },
+    ecoRating: "★★★★☆",
   },
-];
-export const ECO_RATINGS = [
-  { label: "★★★★★", value: 5 },
-  { label: "★★★★☆", value: 4 },
-  { label: "★★★☆☆", value: 3 },
-  { label: "★★☆☆☆", value: 2 },
-  { label: "★☆☆☆☆", value: 1 },
-];
-export const AGE_GROUPS = [
-  { label: "All Ages", value: "all" },
-  { label: "Adventurers 18–40", value: "adventurers" },
-  { label: "Cultural Explorers 25+", value: "cultural" },
-  { label: "Family-Friendly", value: "family" },
-  { label: "Solo Travelers", value: "solo" },
-  { label: "Couples", value: "couples" },
-  { label: "Seniors 60+", value: "seniors" },
-  { label: "Budget Travelers", value: "budget" },
-  { label: "Luxury Travelers", value: "luxury" },
-  { label: "Eco-Conscious Travelers", value: "eco" },
-  { label: "Adventure Seekers", value: "adventure" },
-  { label: "Foodies", value: "foodie" },
-  { label: "History Buffs", value: "history" },
-  { label: "Nature Lovers", value: "nature" },
-  { label: "Beach Lovers", value: "beach" },
-  { label: "Mountain Lovers", value: "mountain" },
-  { label: "City Explorers", value: "city" },
-  { label: "Wildlife Enthusiasts", value: "wildlife" },
-  { label: "Wellness Seekers", value: "wellness" },
-];
-
-export const TRAVEL_DAYS = [
-  { label: "1 day", value: 1 },
-  { label: "2 days", value: 2 },
-  { label: "3 days", value: 3 },
-  { label: "4 days", value: 4 },
-  { label: "5 days", value: 5 },
-  { label: "6 days", value: 6 },
-  { label: "7 days", value: 7 },
-];
-export const TRANSPORTATION_OPTIONS = [
-  { label: "Cycling", value: "cycling" },
-  { label: "Walking", value: "walking" },
-  { label: "Public Transport", value: "public_transport" },
-  { label: "Carpooling", value: "carpooling" },
-  { label: "Electric Vehicles", value: "electric_vehicles" },
-  { label: "Trains", value: "trains" },
-  { label: "Buses", value: "buses" },
-  { label: "Car Rentals", value: "car_rentals" },
-  { label: "Shared Mobility", value: "shared_mobility" },
-  { label: "Domestic Flights", value: "domestic_flights" },
-  { label: "International Flights", value: "international_flights" },
-  { label: "Ferries", value: "ferries" },
-  { label: "Cruises", value: "cruises" },
-  { label: "Motorcycles", value: "motorcycles" },
-  { label: "Scooters", value: "scooters" },
-  { label: "Helicopters", value: "helicopters" },
-  { label: "Private Jets", value: "private_jets" },
-  { label: "Yachts", value: "yachts" },
-  { label: "Horseback Riding", value: "horseback_riding" },
-  { label: "Segways", value: "segways" },
-];
-export const FOOD_OPTIONS = [
-  { label: "Plant-Based", value: "plant_based" },
-  { label: "Organic", value: "organic" },
-  { label: "Local Cuisine", value: "local_cuisine" },
-  { label: "Farm-to-Table", value: "farm_to_table" },
-  { label: "Vegan", value: "vegan" },
-  { label: "Vegetarian", value: "vegetarian" },
-  { label: "Gluten-Free", value: "gluten_free" },
-  { label: "Paleo", value: "paleo" },
-  { label: "Keto", value: "keto" },
-  { label: "Mediterranean", value: "mediterranean" },
-  { label: "Asian Fusion", value: "asian_fusion" },
-  { label: "Street Food", value: "street_food" },
-  { label: "Fine Dining", value: "fine_dining" },
-  { label: "Food Tours", value: "food_tours" },
-  { label: "Cooking Classes", value: "cooking_classes" },
-  { label: "Wine Tasting", value: "wine_tasting" },
-];
+]

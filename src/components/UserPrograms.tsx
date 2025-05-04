@@ -37,18 +37,18 @@ const TravelPrograms = () => {
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
                   <span className="text-sm text-primary">{place.destination.toUpperCase()}</span>
                 </div>
-                <div className="text-sm text-muted-foreground">{place.eco_rating}</div>
+                <div className="text-sm text-muted-foreground">{place.ecoRating}</div>
               </div>
               <CardHeader className="pt-6 px-5">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="h-16 w-16 rounded-full overflow-hidden border border-border">
-                    <img src={place.profilePic} alt={place.destination} className="h-full w-full object-cover" />
+                    <img src={place.heroImage} alt={place.destination} className="h-full w-full object-cover" />
                   </div>
                   <div>
                     <CardTitle className="text-xl text-foreground">{place.destination}</CardTitle>
                     <div className="text-sm text-muted-foreground flex items-center gap-2 mt-1">
                       <Users className="h-4 w-4" />
-                      {place.age_group} • {place.travel_days}d
+                      {place.bestTimeToVisit || "N/A"}
                     </div>
                   </div>
                 </div>
@@ -56,7 +56,7 @@ const TravelPrograms = () => {
                 <div className="flex justify-between items-center gap-4">
                   <div className="px-3 py-1 bg-primary/10 rounded border border-primary/20 text-sm text-primary flex items-center gap-2">
                     <Sparkles className="h-4 w-4" />
-                    {place.travel_plan.title}
+                    {place.foodPlan.title}
                   </div>
                   <div className="text-sm text-muted-foreground flex items-center gap-2">
                     <ShieldIcon className="h-4 w-4" />
@@ -69,7 +69,7 @@ const TravelPrograms = () => {
                   <div className="flex items-start gap-3">
                     <AppleIcon className="h-5 w-5 text-primary mt-1" />
                     <div>
-                      <h3 className="font-medium text-foreground">{place.food_plan.title}</h3>
+                      <h3 className="font-medium text-foreground">{place.foodPlan.title}</h3>
                       <p className="text-sm text-muted-foreground mt-1">Local, sustainable meals</p>
                     </div>
                   </div>
@@ -82,7 +82,7 @@ const TravelPrograms = () => {
                   </div>
                 </div>
                 <div className="mt-5 pt-5 border-t border-border text-sm text-muted-foreground">
-                  <span className="text-primary">&gt;</span> {place.travel_plan.description.substring(0, 100)}...
+                  <span className="text-primary">&gt;</span> {place.overview.substring(0, 100)}...
                 </div>
               </CardContent>
               <CardFooter className="px-5 py-4 border-t border-border">
