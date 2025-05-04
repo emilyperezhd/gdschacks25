@@ -94,7 +94,7 @@ http.route({
 
       const prompt = `
 You are a friendly eco‑friendly travel planner. Create a personalized itinerary based on:
-• Date: ${date}
+• Date  : ${date}
 • Destination: ${destination}
 • Purpose: ${purpose}
 • Interests: ${interests}
