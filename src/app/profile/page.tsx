@@ -9,6 +9,7 @@ import ProfileHeader from "@/components/ProfileHeader";
 import NoTravelPlan from "@/components/NoTravelPlan";
 import CornerElements from "@/components/CornerElements";
 import { Button } from "@/components/ui/button";
+import { Leaf as LeafIcon } from "lucide-react";
 import {
   Tabs,
   TabsList,
@@ -36,14 +37,22 @@ export default function ProfilePage() {
     userId: string;
     itineraryPlan: {
       schedule: string[];
-      activities: { activities: string[]; day: string }[];
+      activities: Array<{
+        day: string;
+        activities: string[];
+        legs: Array<{
+          from: string;
+          to: string;
+          distance_km: number;
+          co2_kg: number;
+        }>;
+      }>;
     };
     isActive: boolean;
-    destinationId?: string; // Added destinationId property
-    food_plan?: {
-      title: string;
-    }; // Added food_plan property
+    destinationId?: string;
+    food_plan?: { title: string };
   }>;
+  
 
   const [selectedPlanId, setSelectedPlanId] = useState<string | null>(null);
   const activePlan = allPlans?.find((plan) => plan.isActive);
@@ -105,20 +114,21 @@ export default function ProfilePage() {
               </div>
 
               <Tabs defaultValue="itinerary" className="w-full">
-                <TabsList className="mb-6 grid grid-cols-2 bg-primary/5 border-primary/20">
-                  <TabsTrigger
-                    value="itinerary"
-                    className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary"
-                  >
-                    <MapIcon className="mr-2 h-4 w-4" /> Itinerary
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="cuisine"
-                    className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary"
-                  >
-                    <Utensils className="mr-2 h-4 w-4" /> Local Cuisine
-                  </TabsTrigger>
-                </TabsList>
+              <TabsList className="mb-6 grid grid-cols-2 bg-primary/5 border-primary/20">
+  <TabsTrigger
+    value="itinerary"
+    className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary"
+  >
+    <MapIcon className="mr-2 h-4 w-4" /> Itinerary
+  </TabsTrigger>
+
+  <TabsTrigger
+    value="cuisine"
+    className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary"
+  >
+    <LeafIcon className="mr-2 h-4 w-4" /> Eco Mode
+  </TabsTrigger>
+</TabsList>
 
                 {/* — Itinerary Tab — */}
                 <TabsContent value="itinerary">
@@ -158,15 +168,52 @@ export default function ProfilePage() {
                   </div>
                 </TabsContent>
 
-                {/* — Cuisine Tab — */}
-                <TabsContent value="cuisine">
-                  <Link href={`/destinations/${currentPlan.destinationId || "unknown"}`}>
-                    <div className="space-y-4">
-                      <h4 className="font-mono text-primary">Food Plan</h4>
-                      <p>{currentPlan.food_plan?.title || "No food plan available"}</p>
-                    </div>
-                  </Link>
-                </TabsContent>
+{/* — Eco‑Mode Tab — */}
+<TabsContent value="cuisine">
+  <div className="space-y-6">
+    <h4 className="font-mono text-primary">Eco‑Travel Stats & Tips</h4>
+
+    {currentPlan.itineraryPlan.activities.map((day) => {
+      // Sum this day’s legs
+      const totalDistance = day.legs.reduce((sum, l) => sum + l.distance_km, 0);
+      const totalCO2 = day.legs.reduce((sum, l) => sum + l.co2_kg, 0);
+
+      // Pick a tip based on CO2
+      const tip =
+        totalCO2 < 1
+          ? "Great job—very low emissions today! Try walking more tomorrow."
+          : totalCO2 < 5
+          ? "Not bad—consider swapping to an e‑scooter for one leg."
+          : "High emissions day—see if you can take the train instead of a taxi.";
+
+      return (
+        <div
+          key={day.day}
+          className="border border-border rounded-lg p-4 bg-background/50"
+        >
+          <div className="flex justify-between items-center mb-2">
+            <span className="font-mono text-sm text-muted-foreground">
+              {day.day}
+            </span>
+            <span className="text-xs font-semibold text-primary">
+              {totalDistance.toFixed(1)} km, {totalCO2.toFixed(2)} kg CO₂
+            </span>
+          </div>
+          <p className="text-sm text-foreground mb-2">• {tip}</p>
+          <ul className="list-disc pl-5 space-y-1 text-xs text-muted-foreground">
+            {day.legs.map((leg, i) => (
+              <li key={i}>
+                {leg.from} → {leg.to}: {leg.distance_km} km,{" "}
+                {leg.co2_kg} kg CO₂
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    })}
+  </div>
+</TabsContent>
+
               </Tabs>
 
               {/* — View Trip Details button — */}
