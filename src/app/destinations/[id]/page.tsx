@@ -6,15 +6,10 @@ import Link from "next/link";
 import { TRAVEL_DESTINATIONS } from "@/constants";
 import { Button } from "@/components/ui/button";
 
-export default function DestinationDetail({
-  params,
-  searchParams: _searchParams, // underscore to avoid “unused variable” lint errors
-}: {
-  params: { id: string };
-  searchParams: Record<string, string | string[] | undefined>;
-}) {
-  const id = parseInt(params.id, 10);
-  const place = TRAVEL_DESTINATIONS.find((p) => p.id === id);
+export default function DestinationDetail(props: any) {
+  const { id } = props.params;
+  const placeId = parseInt(id, 10);
+  const place = TRAVEL_DESTINATIONS.find((p) => p.id === placeId);
 
   if (!place) {
     return (
