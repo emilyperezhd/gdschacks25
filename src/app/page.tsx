@@ -65,7 +65,7 @@ const HomePage = () => {
                   className="overflow-hidden bg-primary text-primary-foreground px-8 py-6 text-lg font-medium"
                 >
                   <Link href={"/generate-program"} className="flex items-center font-mono">
-                    Build Your Program
+                    Build Your Dream Itinerary
                     <ArrowRightIcon className="ml-2 size-5" />
                   </Link>
                 </Button>
