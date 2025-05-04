@@ -46,7 +46,12 @@ export default function PlanPage() {
               )} */}
             </CardContent>
             <CardFooter>
-              <Link href={`/plan/${plan._id.toString()}`}>
+              <Link
+                href={{
+                  pathname: "/profile",
+                  query: { planId: plan._id.toString() },
+                }}
+              >
                 <Button size="sm">View Details</Button>
               </Link>
             </CardFooter>
