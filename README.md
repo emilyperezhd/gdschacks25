@@ -1,31 +1,56 @@
-# Eco‑TravelPal
+# TravelPal
 
-A full‑stack Next.js & Convex application that lets users plan eco‑friendly trips with AI‑powered itineraries and dynamic destination images.
+> A Green AI‑Powered Trip Planner built at GDSCHacks 2025
+
+We teamed up to build TravelPal—a full‑stack Next.js & Convex app that helps travellers craft sustainable, personalized itineraries with the power of Google Gemini.
 
 ---
 
 ## 🚀 Features
 
-- **User Authentication** via [Clerk](https://clerk.dev)
+- **User Authentication**  
+  Secure sign‑in/sign‑up powered by [Clerk](https://clerk.dev).
+
 - **AI‑Generated Itineraries**  
-  - Uses Google Gemini (Generative AI) to suggest daily eco‑friendly activities  
-  - Calculates travel legs with distance (km) & estimated CO₂ emissions (kg)
+  - Gemini‑driven prompts produce day‑by‑day eco‑tips and low‑impact activities.  
+  - Calculates each travel leg’s distance (km) and estimated CO₂ emissions (kg).
+
 - **Profile Dashboard**  
-  - Lists all user plans in a responsive grid  
-  - “Eco‑Mode” tab shows per‑day carbon stats & sustainable travel tips
-- **Destination Details**  
-  - Static gallery of curated destinations  
-  - Hero image, overview, quick facts, top attractions, and insider tips
+  - Responsive grid view of all your travel plans.  
+  - **Eco‑Mode** tab summarizes daily carbon footprints and offers greener alternatives.
 
 ---
 
-## 📦 Tech Stack
+## 🛠 Tech Stack
 
-- **Frontend**: Next.js 15 (App Router), React, TypeScript, Tailwind CSS  
-- **Backend**: Convex (serverless functions & database)  
-- **Auth**: Clerk  
-- **AI**: Google Gemini via REST for text & image generation  
-- **Styling**: Tailwind CSS + CSS variables for a green “eco” theme  
+- **Frontend**: Next.js, React, TypeScript, Tailwind CSS  
+- **Backend**: Convex  
+- **Authentication**: Clerk  
+- **AI**: Google Gemini via REST
+- **Styling**: Tailwind CSS
+
+---
+
+## 🔧 How We Built It
+
+1. **Auth & Database** – Set up Clerk for user management, Convex schema for plans & users.  
+2. **AI Integration** – Text: Gemini’s JSON schema for multi‑day itineraries with legs & emissions.    
+3. **UI/UX** – Tailwind components for a clean, responsive design.  
+
+---
+
+
+## 🏆 Accomplishments
+
+- Delivered a full end‑to‑end voice/chat interface with Vapi for live AI calls.  
+- Achieved zero‑carbon‑thinking UI: daily stats + actionable eco‑tips.  
+- Automated hero image generation—no manual image assets required.
+
+---
+
+## 📚 What We Learned
+
+This was our first hackathon, and we learned how to build a full‑stack application, collaborate effectively in a team setting, and deploy a fully working webapp.
 
 ---
 
