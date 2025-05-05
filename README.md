@@ -2,8 +2,9 @@
 
 > A Green AI‑Powered Trip Planner built at GDSCHacks 2025
 
-We teamed up to build TravelPal—a full‑stack Next.js & Convex app that helps travellers craft sustainable, personalized itineraries with the power of Google Gemini.
+We teamed up to build TravelPal, a full‑stack Next.js & Convex app that helps travellers craft sustainable, personalized itineraries with the power of Google Gemini.
 
+![homepage](assets/homepage.png)
 ---
 
 ## 🚀 Features
