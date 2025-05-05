@@ -47,4 +47,4 @@ This was our first hackathon, and we learned how to build a full‑stack applica
 ---
 
 ## Try it out!
-travelpal-taupe.vercel.app
+[TravelPal](travelpal-taupe.vercel.app)
