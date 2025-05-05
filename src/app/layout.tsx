@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CodeFlex AI - Get Jacked",
-  description: "A modern fitness AI platform to get jacked for free.",
+  title: "TravelPal - Eco-Friendly Travel",
+  description: "A AI powered travel planner for eco-friendly trips.",
 };
 
 export default function RootLayout({
