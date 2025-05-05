@@ -7,7 +7,7 @@ We teamed up to build TravelPal, a full‑stack Next.js & Convex app that helps 
 ![homepage](home.png)
 ---
 
-## 🚀 Features
+## Features
 
 - **User Authentication**  
   Secure sign‑in/sign‑up powered by [Clerk](https://clerk.dev).
@@ -22,7 +22,7 @@ We teamed up to build TravelPal, a full‑stack Next.js & Convex app that helps 
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Frontend**: Next.js, React, TypeScript, Tailwind CSS  
 - **Backend**: Convex  
@@ -32,16 +32,7 @@ We teamed up to build TravelPal, a full‑stack Next.js & Convex app that helps 
 
 ---
 
-## 🔧 How We Built It
-
-1. **Auth & Database** – Set up Clerk for user management, Convex schema for plans & users.  
-2. **AI Integration** – Text: Gemini’s JSON schema for multi‑day itineraries with legs & emissions.    
-3. **UI/UX** – Tailwind components for a clean, responsive design.  
-
----
-
-
-## 🏆 Accomplishments
+## Accomplishments
 
 - Delivered a full end‑to‑end voice/chat interface with Vapi for live AI calls.  
 - Achieved zero‑carbon‑thinking UI: daily stats + actionable eco‑tips.  
@@ -49,9 +40,11 @@ We teamed up to build TravelPal, a full‑stack Next.js & Convex app that helps 
 
 ---
 
-## 📚 What We Learned
+## What We Learned
 
 This was our first hackathon, and we learned how to build a full‑stack application, collaborate effectively in a team setting, and deploy a fully working webapp.
 
 ---
 
+## Try it out!
+travelpal-taupe.vercel.app
