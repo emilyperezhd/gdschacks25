@@ -4,7 +4,7 @@
 
 We teamed up to build TravelPal, a full‑stack Next.js & Convex app that helps travellers craft sustainable, personalized itineraries with the power of Google Gemini.
 
-![homepage](assets/home.png)
+![homepage](home.png)
 ---
 
 ## 🚀 Features
