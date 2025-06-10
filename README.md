@@ -1,4 +1,5 @@
 # TravelPal
+> Created by Ivan Sostaric, Emily Perez, and Shelly Normatov
 
 > A Green AI‑Powered Trip Planner built at GDSCHacks 2025
 
