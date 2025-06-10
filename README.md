@@ -6,7 +6,6 @@ We teamed up to build TravelPal, a full‑stack Next.js & Convex app that helps 
 
 ![homepage](home.png)
 ---
-
 ## Features
 
 - **User Authentication**  
